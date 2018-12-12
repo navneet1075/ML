@@ -26,6 +26,9 @@ In the gradient descent algorithm, the number of steps you take is the learning 
 
 Sometimes the cost function can be a non-convex function where you could settle at a local minima but for linear regression, it is always a convex function.
 
+https://cdn-images-1.medium.com/max/1200/1*D4Q7zeRBmZ3z1CbD37CIhg.png
+
+https://cdn-images-1.medium.com/max/1200/1*fr-f6K1ebanMA4Roz8JENA.png
 
 Alpha is the learning rate which is a hyperparameter that you must specify. A smaller learning rate could get you closer to the minima but takes more time to reach the minima, a larger learning rate converges sooner but there is a chance that you could overshoot the minima.
 
