@@ -16,3 +16,17 @@ Since we want the best values for a_0 and a_1, we convert this search problem in
 
 
 https://cdn-images-1.medium.com/max/1600/1*wQCSNJ486WxL4mZ3FOYtgw.png
+
+
+grtadient descent :
+
+ Gradient descent is a method of updating a_0 and a_1 to reduce the cost function(MSE). The idea is that we start with some values for a_0 and a_1 and then we change these values iteratively to reduce the cost. 
+
+In the gradient descent algorithm, the number of steps you take is the learning rate. This decides on how fast the algorithm converges to the minima.
+
+Sometimes the cost function can be a non-convex function where you could settle at a local minima but for linear regression, it is always a convex function.
+
+
+Alpha is the learning rate which is a hyperparameter that you must specify. A smaller learning rate could get you closer to the minima but takes more time to reach the minima, a larger learning rate converges sooner but there is a chance that you could overshoot the minima.
+
+
