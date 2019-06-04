@@ -1,0 +1,27 @@
+**Model parameters and Hyperparameters:**
+
+What is the Difference Between a Parameter and a Hyperparameter?
+
+**What is a Model Parameter?**
+A model parameter is a configuration variable that is internal to the model and whose value can be estimated from data.
+
+**They are required by the model when making predictions.
+They values define the skill of the model on your problem.
+They are estimated or learned from data.
+They are often not set manually by the practitioner.
+They are often saved as part of the learned model.**
+
+
+
+Parameters are key to machine learning algorithms. They are the part of the model that is learned from historical training data.
+
+
+**In classical machine learning literature, we may think of the model as the hypothesis and the parameters as the tailoring of the hypothesis to a specific set of data.**
+
+Often model parameters are estimated using an optimization algorithm, which is a type of efficient search through possible parameter values.
+
+Some examples of model parameters include:
+
+The weights in an artificial neural network.
+The support vectors in a support vector machine.
+**The coefficients in a linear regression or logistic regression.**
