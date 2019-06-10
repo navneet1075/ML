@@ -1,8 +1,6 @@
 
 **Model parameters and Hyperparameters:**
-
 What is the Difference Between a Parameter and a Hyperparameter?
-
 **What is a Model Parameter?**
 A model parameter is a configuration variable that is internal to the model and whose value can be estimated from data.
 
