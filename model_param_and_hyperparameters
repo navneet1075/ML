@@ -1,5 +1,5 @@
 
-**Model parameters and Hyperparameters:**
+Model parameters and Hyperparameters:
 What is the Difference Between a Parameter and a Hyperparameter?
 What is a Model Parameter?
 A model parameter is a configuration variable that is internal to the model and whose value can be estimated from data.
@@ -23,4 +23,4 @@ Some examples of model parameters include:
 
 The weights in an artificial neural network.
 The support vectors in a support vector machine.
-**The coefficients in a linear regression or logistic regression.**
+The coefficients in a linear regression or logistic regression
