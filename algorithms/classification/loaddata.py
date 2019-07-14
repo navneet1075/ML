@@ -11,11 +11,4 @@ def load_test_data(folderName , filename):
     return test_data
 
 
-#
-# if __name__ == '__main__':
-#     train_data = load_train_data("./data/titanic-dataset", 'train.csv')
-#     test_data = load_test_data("./data/titanic-dataset", 'test.csv')
-#     print(train_data.head())
-#     print(test_data.head())
-
 
