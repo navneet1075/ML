@@ -82,13 +82,6 @@ def preprocess_test_data():
     print(final_test.head())
 
 
-
-
-
-
-
-
-
 def data_analysis():
     train_data = loaddata.load_train_data("./data/titanic-dataset","train.csv")
     #test_data = loaddata.load_test_data("./data/titanic-dataset","test.csv")
@@ -125,9 +118,8 @@ def data_analysis():
 
     print(' the most common port of embarkation is ', train_data['Embarked'].value_counts().idxmax())
 
-
-
-if __name__ == '__main__':
-    data_analysis()
-    preprocess_train_data()
-    preprocess_test_data()
+#
+# if __name__ == '__main__':
+#     data_analysis()
+#     preprocess_train_data()
+#     preprocess_test_data()
