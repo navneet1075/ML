@@ -1,6 +1,10 @@
 import loaddata
 import numpy as np
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.feature_selection import RFE
+
+from classification.train_and_evaluate import train_and_evaluate, predict_actual
 
 
 def preprocess_train_data():
@@ -55,6 +59,12 @@ def preprocess_train_data():
 
     print(final_training.head())
 
+    final_training['IsMinor'] = np.where(final_training['Age'] <= 16, 1, 0)
+
+    feature_selection(final_training)
+
+
+
     return  final_training
 
 
@@ -79,13 +89,27 @@ def preprocess_test_data():
     testing.drop('Ticket', axis=1, inplace=True)
 
     final_test = testing
-    print(final_test.head())
+
+    final_test['IsMinor'] = np.where(final_test['Age'] <= 16, 1, 0)
+
+    #print(final_test.head())
+
+    #feature_selection(final_test)
+    return final_test
+
+def feature_selection(final_train_test):
 
 
-
-
-
-
+    cols = ["Age", "Fare", "TravelAlone", "Pclass_1", "Pclass_2", "Embarked_C", "Embarked_S", "Sex_male", "IsMinor"]
+    X = final_train_test[cols]
+    y = final_train_test['Survived']
+    # Build a logreg and compute the feature importances
+    model = LogisticRegression()
+    # create the RFE model and select 8 attributes
+    rfe = RFE(model, 8)
+    rfe = rfe.fit(X, y)
+    # summarize the selection of the attributes
+    print('Selected features: %s' % list(X.columns[rfe.support_]))
 
 
 
@@ -126,8 +150,15 @@ def data_analysis():
     print(' the most common port of embarkation is ', train_data['Embarked'].value_counts().idxmax())
 
 
-
 if __name__ == '__main__':
+    test_data = loaddata.load_test_data("./data/titanic-dataset", "test.csv")
     data_analysis()
-    preprocess_train_data()
-    preprocess_test_data()
+    final_train = preprocess_train_data()
+    final_test= preprocess_test_data()
+
+    Selected_features = ['Age', 'TravelAlone', 'Pclass_1', 'Pclass_2', 'Embarked_C',
+                         'Embarked_S', 'Sex_male', 'IsMinor']
+    logreg = LogisticRegression()
+    train_and_evaluate(final_train,Selected_features,logreg)
+    predict_actual(final_test,Selected_features,test_data,logreg)
+
