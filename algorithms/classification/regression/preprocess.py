@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import RFE
 
 def preprocess_train_data():
-    train_data = loaddata.load_train_data("./data/titanic-dataset","train.csv")
+    train_data = loaddata.load_train_data("../dataset/titanic","train.csv")
     print(' the number of samples in the training data is {}', train_data.shape[0])
 
     # applying imputation to age by using median
@@ -40,7 +40,7 @@ def preprocess_train_data():
 
 
 def preprocess_test_data():
-    test_data = loaddata.load_test_data("./data/titanic-dataset", "test.csv")
+    test_data = loaddata.load_test_data("../dataset/titanic", "test.csv")
 
     print(' the number of samples in the training data is {}', test_data.shape[0])
     test_df = test_data.copy()
@@ -81,7 +81,7 @@ def feature_selection(final_train_test):
 
 
 def data_analysis():
-    train_data = loaddata.load_train_data("./data/titanic-dataset","train.csv")
+    train_data = loaddata.load_train_data("../dataset/titanic","train.csv")
     missing_Values = train_data.isna().sum()
     print(missing_Values)
 
