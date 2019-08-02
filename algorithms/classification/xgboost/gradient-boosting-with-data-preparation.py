@@ -10,7 +10,7 @@ import pandas
 
 
 def xgboost_with_data_preparation_train_eval():
-    data = pandas.read_csv('../dataset/iris/iris.data', header=None)
+    data = pandas.read_csv('../../dataset/iris/iris.data', header=None)
     dataset = data.values
     X = dataset[:, 0:4] #features
     Y = dataset[:, 4] #output

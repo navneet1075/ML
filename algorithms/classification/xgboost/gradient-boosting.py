@@ -6,7 +6,7 @@ import logging
 
 
 def xgboost_load_train_eval():
-    dataset = loadtxt('../dataset/pima-indians-diabetes/pima-indians-diabetes.data.csv', delimiter=',')
+    dataset = loadtxt('../../dataset/pima-indians-diabetes/pima-indians-diabetes.data.csv', delimiter=',')
     X = dataset[:, 0:8]  # features
     Y = dataset[:, 8]  # output
 
