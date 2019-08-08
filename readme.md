@@ -37,8 +37,11 @@ Sometimes the cost function can be a non-convex function where you could settle 
 
 Alpha is the learning rate which is a hyperparameter that you must specify. A smaller learning rate could get you closer to the minima but takes more time to reach the minima, a larger learning rate converges sooner but there is a chance that you could overshoot the minima.
 
-results :
+**results** :
+
+|A      |B             |C                    |D             |E            |F               |
 |-------|--------------|---------------------|--------------|-------------|----------------|
 |Dataset|Algorithm     |Total Dataset records|Train data set|Test data set|Accuracy        |
 |titanic|classification|1309                 |418           |891          |0.791           |
 |titanic|xgboost       |1309                 |418           |891          |to be calculated|
+
