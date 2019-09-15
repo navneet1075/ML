@@ -1,4 +1,5 @@
 from sklearn import preprocessing
+from sklearn.naive_bayes import GaussianNB
 
 def merge(list1, list2):    
     merged_list = [(p1, p2) for idx1, p1 in enumerate(list1)  
@@ -27,7 +28,6 @@ features=merge(weather_encoded,temp_encoded)
 
 for values in features:
     print(values)
-from sklearn.naive_bayes import GaussianNB
 
 model = GaussianNB()
 
