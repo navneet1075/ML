@@ -36,12 +36,6 @@ p_rainy_yes = outlook_count['sunny', 'yes']
 X_train = pd.get_dummies(data[['outlook', 'temp', 'humidity', 'windy']])
 y_train = pd.DataFrame(data['play'])
 
-#assigning predictor and target variables
-# x= np.array([[-3,7],[1,5], [1,2], [-2,0], [2,3], [-4,0], [-1,1], [1,1], [-2,2], [2,7], [-4,1], [-2,7]])
-# Y = np.array([3, 3, 3, 3, 4, 3, 3, 4, 3, 4, 4, 4])
-# print(X_train.info())
-# print(X_train.head())
-
 
 model = GaussianNB()
 
