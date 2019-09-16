@@ -1,0 +1,26 @@
+	• Naïve Bayes
+		○ Probabilistic machine learning algorithm
+		○ Naïve because it assumes that features are not related to each other and does not change the value of each other.
+		○ Conditional probability
+			§ Probability of occurance of A when B has already occurred
+			§ P(A|B) = p(A and B)|p(B)
+	• Goal : learning function f(x) -> y
+	• Y : one of k classses (e.g spam/nonspam, 0-9)
+	• Proabilistic classification:
+	• Most proable class given observation : y = arg max P(y|x)
+	• Calcualte the probabilty of all the classes happening and then select the class with most probabilistic value
+	• P(y|x) = p(x|y)*p(y)/p(X)
+		○ P(y) -> prior 
+		○ P(x|y) -> probability of x given y : class conditional model
+		○ P(x) -> sum of all proability of all x given Y -> does not connect with any class , this does not affect the prediction
+		○ It makes the probability comparable to other data points
+	• It’s a generative model
+	• A complete proability distribution for each class
+		○ Defines likelihood for any point x
+		○ P(class) via P(observation)
+		○ Can generate synthetic observations
+		○ P(y|x) -> p(x|y) * p(y)
+	• Discimative model looks for the boundaries and then decides the class
+	• A generative model calculates the probability and then decides the class
+	• For gaussian distributuon :
+For each class , calclaute mean and variance.
