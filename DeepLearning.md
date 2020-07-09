@@ -20,6 +20,7 @@ DeepLearning topics and bullet points
   6. chain rule for calculating derivatives.
   7. benefits of different activation functions.
   8. large neural networks almost never get stuck in local minima, and even when they do these local optima are almost as good as the global optimum. However, they can still get stuck on long plateaus for a long time.
+  9. trasnsfer learning : in laya man terms , when we have the lower layer already trained on some features , we can directly use those lower levels training results in directly higher hidden layers rather than training again from scratch. this is called transfer learning.
  
 
 Batch Size :
